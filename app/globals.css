@@ -1,0 +1,80 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Brand colours — matched to babylosstherapist.com */
+  --primary: #6B7F5E;
+  --primary-dark: #566A4C;
+  --background: #FAF8F5;
+  --foreground: #3B3329;
+  --card: #FFFFFF;
+  --card-foreground: #3B3329;
+  --popover: #FFFFFF;
+  --popover-foreground: #3B3329;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F0EBE3;
+  --secondary-foreground: #3B3329;
+  --muted: #F0EBE3;
+  --muted-foreground: #7D7168;
+  --accent: #C4A67D;
+  --accent-foreground: #3B3329;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: #E5DDD3;
+  --input: #E5DDD3;
+  --ring: #6B7F5E;
+  --radius: 0.5rem;
+}
+
+@theme inline {
+  --font-heading: var(--font-cormorant), Georgia, serif;
+  --font-body: var(--font-dm-sans), system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent-warm: var(--accent);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
