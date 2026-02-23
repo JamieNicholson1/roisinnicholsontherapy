@@ -55,11 +55,7 @@ export function WaitlistForm({ variant = "light" }: WaitlistFormProps) {
 
       if (data.success) {
         setStatus("success")
-        setMessage(
-          data.alreadySubscribed
-            ? "You're already on the waitlist — I'll be in touch soon."
-            : "You're on the waitlist! I'll be in touch as soon as a space opens up."
-        )
+        setMessage("You're on the waitlist! I'll be in touch as soon as a space opens up.")
       } else {
         setStatus("error")
         setMessage(data.error || "Something went wrong. Please try again.")
