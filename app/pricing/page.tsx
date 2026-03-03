@@ -41,13 +41,13 @@ export default function PricingPage() {
                 Individual Therapy
               </h2>
               <p className="font-body text-sm text-muted-foreground leading-relaxed mb-8">
-                A 60-minute one-to-one therapy session held online via secure
+                A 50-minute one-to-one therapy session held online via secure
                 video.
               </p>
 
               <div className="mb-8">
                 <span className="font-heading text-4xl text-foreground">
-                  &pound;80
+                  &pound;85
                 </span>
                 <span className="font-body text-sm text-muted-foreground ml-1">
                   per session
@@ -56,11 +56,10 @@ export default function PricingPage() {
 
               <ul className="space-y-3 mb-10 flex-grow">
                 {[
-                  "60-minute session via secure video",
+                  "50-minute session via secure video",
                   "Person-centred approach",
                   "Specialist baby loss support",
                   "Practical tools and strategies",
-                  "Flexible scheduling",
                   "Weekly or fortnightly options",
                 ].map((item) => (
                   <li
@@ -116,11 +115,10 @@ export default function PricingPage() {
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    "Full 60-minute therapeutic session",
+                    "50-minute therapeutic session",
                     "Secure, confidential video platform",
                     "Person-centred specialist support",
                     "Practical tools to use between sessions",
-                    "Flexible scheduling around your life",
                   ].map((item) => (
                     <li
                       key={item}
@@ -141,12 +139,12 @@ export default function PricingPage() {
                   <p className="font-body text-sm text-muted-foreground leading-relaxed">
                     I understand that life after loss can be unpredictable. If
                     you need to cancel or reschedule, please give at least
-                    24&nbsp;hours&apos; notice where possible.
+                    48&nbsp;hours&apos; notice where possible.
                   </p>
                   <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                    Late cancellations or missed sessions may be charged at the
-                    full session rate. I will always work with you
-                    compassionately around this.
+                    Late cancellations (less than 48 hours) or missed sessions
+                    may be charged at the full session rate. I will always work
+                    with you compassionately around this.
                   </p>
                 </div>
               </div>

@@ -13,6 +13,16 @@ const insuranceOptions = [
   { id: "none", label: "None / Self-funding" },
 ]
 
+const countryOptions = [
+  { value: "United Kingdom", code: "+44" },
+  { value: "Ireland", code: "+353" },
+  { value: "Australia", code: "+61" },
+  { value: "New Zealand", code: "+64" },
+  { value: "South Africa", code: "+27" },
+  { value: "United Arab Emirates", code: "+971" },
+  { value: "Other", code: "" },
+]
+
 export function WaitlistForm({ variant = "light" }: WaitlistFormProps) {
   const [form, setForm] = useState({
     firstName: "",
@@ -28,7 +38,21 @@ export function WaitlistForm({ variant = "light" }: WaitlistFormProps) {
   const isDark = variant === "dark"
 
   const update = (field: string, value: string) => {
-    setForm((prev) => ({ ...prev, [field]: value }))
+    setForm((prev) => {
+      const next = { ...prev, [field]: value }
+      // When country changes, auto-fill phone prefix
+      if (field === "country") {
+        const match = countryOptions.find((c) => c.value === value)
+        if (match?.code) {
+          // Only set prefix if phone is empty or already a prefix
+          const isPhoneEmpty = !prev.phone || countryOptions.some((c) => c.code === prev.phone)
+          if (isPhoneEmpty) {
+            next.phone = match.code + " "
+          }
+        }
+      }
+      return next
+    })
     if (status === "error") setStatus("idle")
   }
 
@@ -177,15 +201,22 @@ export function WaitlistForm({ variant = "light" }: WaitlistFormProps) {
           <label htmlFor="wl-country" className={labelClass}>
             Country
           </label>
-          <input
+          <select
             id="wl-country"
-            type="text"
             value={form.country}
             onChange={(e) => update("country", e.target.value)}
-            placeholder="United Kingdom"
             required
-            className={inputBase}
-          />
+            className={`${inputBase} ${!form.country ? (isDark ? "text-white/40" : "text-muted-foreground") : ""}`}
+          >
+            <option value="" disabled>
+              Select your country
+            </option>
+            {countryOptions.map((c) => (
+              <option key={c.value} value={c.value}>
+                {c.value}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
 

@@ -89,7 +89,7 @@ export default function GriefCoursePage() {
             <div className="grid sm:grid-cols-2 gap-4 text-left mb-12">
               {[
                 "You feel isolated in your grief because no one around you truly understands",
-                "The world has moved on, but you haven't — and you don't know how to",
+                "The world has moved on but yours feels like it's standing still",
                 "You're struggling with anxiety, flashbacks, or intrusive thoughts",
                 "You feel guilty for grieving, or guilty for having moments of joy",
                 "You want practical support but waiting lists for therapy feel impossibly long",
@@ -195,12 +195,12 @@ export default function GriefCoursePage() {
             </p>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                "Parents who have experienced miscarriage",
-                "Parents who have experienced stillbirth",
-                "Those navigating pregnancy after loss",
+                "Anyone who has experienced any type of baby loss",
                 "Partners and family members affected by baby loss",
                 "Anyone who feels their grief is misunderstood or unseen",
-                "Those looking for support alongside or instead of one-to-one therapy",
+                "Those looking for extra support alongside therapy",
+                "Those who feel stuck in their grief and don't know what to do next",
+                "Those struggling with triggers or overwhelming grief",
               ].map((item) => (
                 <div
                   key={item}

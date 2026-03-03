@@ -39,23 +39,24 @@ export default function TherapyPage() {
             </h2>
             <div className="space-y-5 mb-10">
               <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed">
-                Whether your baby was stillborn, you experienced a miscarriage,
-                or you&apos;re now pregnant again after loss — I see you. I know
-                what it&apos;s like to love a baby that others may not have got
-                to meet.
+                Whatever your experience of baby loss — whether through
+                miscarriage, stillbirth, termination for medical reasons,
+                ectopic pregnancy, or any other path — I see you. I know what
+                it&apos;s like to love a baby that others may not have got to
+                meet.
               </p>
               <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed">
-                I understand the pregnancy anxiety, the fear that builds before
-                every scan, the way your body tenses in waiting rooms, and the
-                dread of every question — especially &ldquo;Is this your
-                first?&rdquo;
+                I understand pregnancy after loss anxiety — the fear that builds
+                before every scan, the way your body tenses in waiting rooms,
+                and the dread of the questions that others don&apos;t think
+                twice about asking.
               </p>
             </div>
 
             {/* What I understand list */}
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                "Loving a baby others may not have got to meet",
+                "Loving a baby the world doesn't always make space for",
                 "Feeling forgotten when the world moves on",
                 "Fear bonding with another pregnancy",
                 "The trauma of scan rooms and medical appointments",
@@ -99,8 +100,8 @@ export default function TherapyPage() {
                   text: "Build confidence to communicate your needs and set boundaries in medical settings that may feel triggering.",
                 },
                 {
-                  title: "Connect With Your Current Pregnancy While Honouring Loss",
-                  text: "Tender support for bonding with your new baby while making space for the baby you lost.",
+                  title: "Pregnancy After Loss Support",
+                  text: "Whether you're pregnant again, considering it or not sure you'll ever feel ready — I understand what it's like to carry grief and hope in the same breath.",
                 },
                 {
                   title: "Build Self-Compassion",

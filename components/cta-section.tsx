@@ -39,6 +39,29 @@ export function CTASection({
           </p>
         </div>
 
+        {/* Before You Enquire — important info */}
+        <div className="max-w-lg mx-auto mb-10 rounded-lg bg-white/10 border border-white/20 p-6">
+          <h3 className="font-heading text-lg text-white mb-3 text-center">
+            Before You Enquire
+          </h3>
+          <ul className="space-y-2.5">
+            {[
+              "All sessions are online only (via secure video)",
+              "I am unable to work with clients based in the USA or Canada due to licensing requirements",
+              "I do not provide crisis or emergency support",
+              "Therapy is not a substitute for medical or psychiatric care",
+            ].map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-3 font-body text-sm text-white/80 leading-relaxed"
+              >
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-white/40 shrink-0" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <WaitlistForm variant="dark" />
 
         <div className="text-center mt-10">

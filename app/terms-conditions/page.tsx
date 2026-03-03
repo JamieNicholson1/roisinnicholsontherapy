@@ -151,7 +151,7 @@ export default function TermsConditionsPage() {
                     <ul className="space-y-2 ml-4">
                       {[
                         "All sessions are online only — no face-to-face appointments are available",
-                        "Sessions are 60 minutes in duration",
+                        "Sessions are 50 minutes in duration",
                         "Therapy is not a substitute for medical or psychiatric care",
                         "Roisin is unable to work with clients based in the USA or Canada due to licensing requirements",
                         "This service does not provide crisis or emergency support",
@@ -206,7 +206,7 @@ export default function TermsConditionsPage() {
                   </h2>
                   <div className="space-y-4">
                     <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                      Individual therapy sessions are &pound;80 per 60-minute
+                      Individual therapy sessions are &pound;85 per 50-minute
                       session. Payment is made in advance via bank transfer.
                       Payment details will be shared once we agree to work
                       together. All prices are in GBP (&pound;).
@@ -226,10 +226,10 @@ export default function TermsConditionsPage() {
                     <p className="font-body text-sm text-muted-foreground leading-relaxed">
                       We understand that life after loss can be unpredictable. If
                       you need to cancel or reschedule a session, please give at
-                      least 24&nbsp;hours&apos; notice where possible.
+                      least 48&nbsp;hours&apos; notice where possible.
                     </p>
                     <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                      Late cancellations (less than 24 hours) or missed sessions
+                      Late cancellations (less than 48 hours) or missed sessions
                       may be charged at the full session rate. This policy is
                       always applied with compassion and individual circumstances
                       will be considered.
