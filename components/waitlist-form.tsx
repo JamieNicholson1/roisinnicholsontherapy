@@ -44,10 +44,18 @@ export function WaitlistForm({ variant = "light" }: WaitlistFormProps) {
       if (field === "country") {
         const match = countryOptions.find((c) => c.value === value)
         if (match?.code) {
-          // Only set prefix if phone is empty or already a prefix
-          const isPhoneEmpty = !prev.phone || countryOptions.some((c) => c.code === prev.phone)
-          if (isPhoneEmpty) {
+          // Set prefix if phone is empty, or is just a previous country prefix (with or without trailing space)
+          const trimmedPhone = prev.phone.trim()
+          const isJustPrefix = !trimmedPhone || countryOptions.some((c) => c.code === trimmedPhone)
+          if (isJustPrefix) {
             next.phone = match.code + " "
+          }
+        } else {
+          // "Other" selected — clear prefix if phone is just a prefix
+          const trimmedPhone = prev.phone.trim()
+          const isJustPrefix = !trimmedPhone || countryOptions.some((c) => c.code === trimmedPhone)
+          if (isJustPrefix) {
+            next.phone = ""
           }
         }
       }
