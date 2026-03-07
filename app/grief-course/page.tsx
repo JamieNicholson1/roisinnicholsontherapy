@@ -178,6 +178,82 @@ export default function GriefCoursePage() {
                 </div>
               ))}
             </div>
+
+            {/* What's included breakdown */}
+            <div className="mt-12 bg-card rounded-lg p-8 md:p-10 border border-border/40">
+              <h3 className="font-heading text-2xl text-foreground mb-2 text-center">
+                What You Get Access To
+              </h3>
+              <p className="font-body text-sm text-muted-foreground text-center mb-8">
+                Everything you need, all in one place — go at your own pace.
+              </p>
+
+              <div className="grid sm:grid-cols-2 gap-5">
+                {[
+                  {
+                    icon: (
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary" aria-hidden="true">
+                        <polygon points="23 7 16 12 23 17 23 7" />
+                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                      </svg>
+                    ),
+                    title: "16 Compassionate Video Sessions",
+                    text: "Five sessions per week, gently guiding you through understanding your unique grief at a pace that feels right for you.",
+                  },
+                  {
+                    icon: (
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary" aria-hidden="true">
+                        <path d="M9 18V5l12-2v13" />
+                        <circle cx="6" cy="18" r="3" />
+                        <circle cx="18" cy="16" r="3" />
+                      </svg>
+                    ),
+                    title: "Guided Meditations & Relaxations",
+                    text: "Gentle exercises to help you reconnect with yourself when everything feels overwhelming — designed specifically for grief.",
+                  },
+                  {
+                    icon: (
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary" aria-hidden="true">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                      </svg>
+                    ),
+                    title: "10+ Printable Grief Exercises",
+                    text: "Practical PDF tools and worksheets you can print off and return to whenever you need them — your personal grief toolkit.",
+                  },
+                  {
+                    icon: (
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="16" x2="12" y2="12" />
+                        <line x1="12" y1="8" x2="12.01" y2="8" />
+                      </svg>
+                    ),
+                    title: "Grief Education That Makes Sense",
+                    text: "Understand why grief feels the way it does and learn how to move forward alongside it — not past it, but with it.",
+                  },
+                ].map((item) => (
+                  <div
+                    key={item.title}
+                    className="flex items-start gap-4 bg-secondary rounded-lg p-5 border border-border/30"
+                  >
+                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h4 className="font-heading text-base text-foreground mb-1">
+                        {item.title}
+                      </h4>
+                      <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                        {item.text}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
