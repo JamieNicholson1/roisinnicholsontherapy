@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { siteConfig } from "@/lib/constants"
 import { InstagramIcon } from "@/components/icons"
 import { WaitlistForm } from "@/components/waitlist-form"
@@ -13,6 +14,8 @@ export function CTASection({
   description = "Join the waitlist and I\u2019ll be in touch as soon as a space opens up.",
   compact = false,
 }: CTASectionProps) {
+  const waitlistFull = siteConfig.waitlistFull
+
   return (
     <section
       id="waitlist"
@@ -35,12 +38,33 @@ export function CTASection({
           </h2>
 
           <p className="font-body text-sm md:text-base text-white/75 leading-relaxed max-w-md mx-auto">
-            {description}
+            {waitlistFull
+              ? "The therapy waitlist is currently full — but you don\u2019t have to wait for support."
+              : description}
           </p>
         </div>
 
+        {waitlistFull && (
+          <div className="max-w-lg mx-auto mb-10 rounded-lg bg-white/15 border border-white/25 p-8 text-center">
+            <p className="font-heading text-xl md:text-2xl text-white leading-snug mb-3">
+              You Don&apos;t Have to Wait
+            </p>
+            <p className="font-body text-sm text-white/75 leading-relaxed mb-6 max-w-md mx-auto">
+              My Grief Support Course is available now, with immediate access to
+              practical tools and guidance created specifically for parents
+              navigating baby loss.
+            </p>
+            <Link
+              href="/grief-course"
+              className="inline-flex items-center justify-center rounded-sm bg-white px-10 py-4 font-body text-sm font-semibold text-[#3B3329] hover:bg-white/90 transition-all duration-200 hover:shadow-xl"
+            >
+              Explore the Grief Support Course
+            </Link>
+          </div>
+        )}
+
         {/* Before You Enquire — important info */}
-        <div className="max-w-lg mx-auto mb-10 rounded-lg bg-white/10 border border-white/20 p-6">
+        <div className={`max-w-lg mx-auto mb-10 rounded-lg bg-white/10 border border-white/20 p-6 ${waitlistFull ? "opacity-45" : ""}`}>
           <h3 className="font-heading text-lg text-white mb-3 text-center">
             Before You Enquire
           </h3>
@@ -62,7 +86,7 @@ export function CTASection({
           </ul>
         </div>
 
-        <WaitlistForm variant="dark" />
+        <WaitlistForm variant="dark" disabled={waitlistFull} />
 
         <div className="text-center mt-10">
           <a

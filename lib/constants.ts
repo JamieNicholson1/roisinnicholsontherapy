@@ -7,6 +7,7 @@ export const siteConfig = {
   instagramHandle: "@roisinnicholson.therapy",
   griefCourse: "https://life-after-baby-loss-a-safe-space-to-land.teachery.co/payment",
   url: "https://www.babylosstherapist.com",
+  waitlistFull: true,
 }
 
 export const navLinks = [
