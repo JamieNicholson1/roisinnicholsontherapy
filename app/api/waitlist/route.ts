@@ -133,8 +133,10 @@ export async function POST(request: Request) {
     const alreadySubscribed =
       memberData.status === "subscribed" && memberRes.status === 200
 
-    // Step 2: Add tags — "waitlist" + country + insurance provider
+    // Step 2: Add tags — source site + "waitlist" + country + insurance provider
+    // "source:uk-site" distinguishes UK-site signups from AU-site signups in the shared audience
     const tags: { name: string; status: string }[] = [
+      { name: "source:uk-site", status: "active" },
       { name: "waitlist", status: "active" },
       { name: `country:${country}`, status: "active" },
     ]
