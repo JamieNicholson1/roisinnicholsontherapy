@@ -38,6 +38,10 @@ export const metadata: Metadata = {
     'BACP accredited counsellor',
     'person-centred therapy',
   ],
+  icons: {
+    icon: [{ url: '/icon.png', type: 'image/png', sizes: '512x512' }],
+    apple: '/apple-icon.png',
+  },
 }
 
 export const viewport: Viewport = {
